@@ -28,4 +28,4 @@ jobs:
 
       # 依存関係送信
       - name: Submit dependency graph
-        uses: github/dependency-submission-action@v4
+        uses: github/dependency-submission-action@v1
