@@ -1,0 +1,12 @@
+{
+  "name": "dependency-review-test",
+  "version": "1.0.0",
+  "description": "Test repo for GitHub Dependency Review",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
