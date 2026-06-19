@@ -5,30 +5,11 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-
 jobs:
-  submit-dependencies:
+  test:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # Node環境セットアップ（推奨）
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      # インストール（精度UP）
-      - name: Install dependencies
-        run: npm ci
-
-      # 依存関係送信
-      - name: Submit dependency graph
-        uses: github/dependency-submission-action@v1
+      - run: npm install
